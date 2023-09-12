@@ -121,7 +121,7 @@ To train the model, follow these steps:
 5. After training, the model will be saved in the specified directory.
 
 
-### Label Distribution Analysis
+### Label Distribution Analysis:
 
 Before training the model, it's important to be aware of the label distribution within your art dataset. An imbalanced dataset, where some labels are much more frequent than others, can lead to biased model performance. To gain insights into the label distribution, you can run the following command:
 
@@ -139,7 +139,7 @@ Running this command will generate plots that illustrate the frequency of each l
 
 As you can see from the label distribution plots, data may be imbalanced, with certain labels appearing more frequently than others.
 
-### Data Balancing with Custom Data Generator
+### Data Balancing with Custom Data Generator:
 
 To address the label imbalance issue, we have developed a custom data generator (custom_data_generator.py). This generator employs a strategic approach to augment and balance the dataset during training.
 
@@ -153,7 +153,7 @@ By using this custom data generator, we ensure that the model receives a balance
 
 This approach is particularly effective when dealing with imbalanced datasets, where certain labels may be underrepresented. It helps the model learn from all labels more evenly, resulting in better overall performance.
 
-### Data Augmentation
+### Data Augmentation:
 In order to enhance the performance and robustness of our models, we have implemented a data augmentation stage that incorporates various transformations. These transformations include rotation, width shift, height shift, zoom range, and horizontal flip.
 
 Rotation: We apply random rotations to the images within a specified range, allowing our models to generalize better to different orientations and angles.
@@ -202,6 +202,18 @@ To perform color analysis on an image, follow these steps:
 1. Run the `run_color_analysis.py` script.
 2. Use the `get_top_3_dominant_colors(image_path)` method to extract the top 3 dominant colors from an image specified by the `image_path`.
 3. Use the `plot_dominant_colors2(image_path, top_colors)` method to plot the original image and the dominant colors.
+
+<p align="center">
+  <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png" target="_blank">
+    <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png" target="_blank">
+    <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png">
+  </a>
+</p>
 
 # 6. Similarity Detection
 
