@@ -162,7 +162,8 @@ class CrawlDirectory:
         except Exception as ex:
             print(ex)
             # saving artist and their expertises
-            pd.DataFrame(list(artists.items()), columns=['username', 'category_labels']).to_csv("crawled_data/artists.csv")
+            (pd.DataFrame(list(artists.items()), columns=['username', 'category_labels'])
+             .to_csv("crawled_data/artists.csv"))
             self.__resume_guide()
 
     def get_post_elements(self):
@@ -239,7 +240,8 @@ class CrawlDirectory:
 
                     next_button_is_enabled = self.go_to_next_page()
 
-                pd.DataFrame(list(posts.items()), columns=['post_url', 'category_labels']).to_csv("crawled_data/posts.csv")
+                (pd.DataFrame(list(posts.items()), columns=['post_url', 'category_labels'])
+                 .to_csv("crawled_data/posts.csv"))
                 self.current_state_index = row_index + 1
 
         except Exception as ex:
@@ -336,13 +338,15 @@ class CrawlDirectory:
                 if image_url:
                     images[image_url] = category_labels
 
-                pd.DataFrame(list(images.items()), columns=['image_url', 'category_labels']).to_csv("crawled_data/images.csv")
+                (pd.DataFrame(list(images.items()), columns=['image_url', 'category_labels'])
+                 .to_csv("crawled_data/images.csv"))
                 self.current_state_index = row_index + 1
 
         except Exception as ex:
             print(ex)
             # saving url of images
-            pd.DataFrame(list(images.items()), columns=['image_url', 'category_labels']).to_csv("crawled_data/images.csv")
+            (pd.DataFrame(list(images.items()), columns=['image_url', 'category_labels'])
+             .to_csv("crawled_data/images.csv"))
             self.__resume_guide()
 
     @staticmethod
