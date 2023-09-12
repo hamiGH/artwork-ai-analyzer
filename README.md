@@ -120,6 +120,39 @@ To train the model, follow these steps:
 4. The model will be trained using the preprocessed images and the specified parameters.
 5. After training, the model will be saved in the specified directory.
 
+
+### Label Distribution Analysis
+
+Before training the model, it's important to be aware of the label distribution within your art dataset. An imbalanced dataset, where some labels are much more frequent than others, can lead to biased model performance. To gain insights into the label distribution, you can run the following command:
+
+```bash
+python run_label_distribution.py
+```
+
+Running this command will generate plots that illustrate the frequency of each label in the dataset. These plots can help you understand the extent of the label imbalance.
+
+<p align="center">
+  <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/label_distribution.png" target="_blank">
+    <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/label_distribution.png">
+  </a>
+</p>
+
+As you can see from the label distribution plots, data may be imbalanced, with certain labels appearing more frequently than others.
+
+### Data Balancing with Custom Data Generator
+
+To address the label imbalance issue, we have developed a custom data generator (custom_data_generator.py). This generator employs a strategic approach to augment and balance the dataset during training.
+
+Here's how the custom data generator works:
+
+1. **Probability Computation:** We compute a probability for each sample in the dataset based on its label frequency. Labels that occur less frequently will have a higher probability of being selected during batch generation.
+
+2. **Random Batch Generation:** During training, the generator randomly selects a batch of samples based on these computed probabilities. This means that labels with lower frequencies will be oversampled to balance the dataset.
+
+By using this custom data generator, we ensure that the model receives a balanced representation of each label during training, improving its ability to generalize and make accurate predictions.
+
+This approach is particularly effective when dealing with imbalanced datasets, where certain labels may be underrepresented. It helps the model learn from all labels more evenly, resulting in better overall performance.
+
 ### Data Augmentation
 In order to enhance the performance and robustness of our models, we have implemented a data augmentation stage that incorporates various transformations. These transformations include rotation, width shift, height shift, zoom range, and horizontal flip.
 
