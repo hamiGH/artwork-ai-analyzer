@@ -1,0 +1,56 @@
+# BASE URL
+base_url: "https://directory.art"
+
+headless_mode: true  # Set to 'true' to enable headless mode, or 'false' to disable
+
+# Description: This configuration defines the steps for the crawling program.
+#              You can go from step 1 to the last step, activating one step at a time.
+#              After finishing a step, you can move to the next step.
+#              Each step uses the results of the previous step.
+
+active_step: crawl_artists    # Specify the active step here
+current_state_index: 2      # Data to resume crawling
+
+crawling_steps:
+  - name: crawl_artists
+    description: "Get the usernames of artists along with their expertise."
+
+  - name: crawl_posts
+    description: "Get the URLs of all posts from each artist."
+
+  - name: crawl_images
+    description: "Get the URLs of all images of artworks."
+
+  - name: download_images
+    description: "Download all images according to their URLs."
+
+
+# Maximum retry limit for data retrieval attempts.
+max_retries: 5
+
+# All CSS codes for page elements required for crawling
+css_codes:
+  artist_element: ".sc-959c15c0-0.bNTwEe"
+  post_element: "div.sc-1f084561-0.fCSUwo a.text-decoration-none"
+  image_element: "div.col-lg-6"
+  next_button: "button.next"
+  next_button_ability: "li.next a"
+#  image_element: "img.main-Image"
+#  video_element: ""
+
+# All art categories
+art_categories: ['3D art' , 'Abstract art', 'Acting' , 'Animation', 'Anime', 'Architecture', 'Assemblage', 'Body art',
+                 'Calligraphy', 'Collage', 'Conceptual art', 'Copywriting', 'Curator', 'Dance', 'Digital art', 'DJing',
+                 'Drawing', 'Eco art', 'Ephemera', 'Fashion', 'Filmmaking', 'Fire performance', 'Food sculpting',
+                 'Food styling', 'Found objects', 'Game design', 'Generative art', 'Glassblowing',  'Graffiti',
+                 'Graphic design', 'Ice carving', 'Illustration', 'Improvisation', 'Industrial design',
+                 'Installation art', 'Interior design', 'Jewellery making', 'Kinetic sculpture', 'Land art',
+                 'Light installation', 'Magic and illusion', 'Mangaka', 'Metal work', 'Modelling', 'Motion design',
+                 'Mural', 'Music composition', 'Music production', 'NFT art', 'Nude art', 'Object theatre', 'Painting',
+                 'Paper', 'Pen', 'Performance art', 'Photography', 'Playwriting', 'Poetry', 'Pop art',
+                 'Pottery and ceramics', 'Printmaking', 'Product design', 'Resin', 'Sand sculpture', 'Screen printing',
+                 'Screenwriting', 'Sculpture', 'Singing', 'Social media content', 'Sound engineering',
+                 'Sound sculpting', 'Stand-up comedy', 'Stop motion', 'Street art', 'Street dance', 'Tattoo art',
+                 'UI design', 'Upcycling art', 'UX design', 'Video art', 'Video editing', 'Videography',
+                 'Virtual reality', 'VJing', 'Voice acting', 'Woodwork', 'Writing']
+
