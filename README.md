@@ -203,17 +203,18 @@ To perform color analysis on an image, follow these steps:
 2. Use the `get_top_3_dominant_colors(image_path)` method to extract the top 3 dominant colors from an image specified by the `image_path`.
 3. Use the `plot_dominant_colors2(image_path, top_colors)` method to plot the original image and the dominant colors.
 
-<p align="center">
-  <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png" target="_blank">
-    <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png" target="_blank">
-    <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png">
-  </a>
-</p>
+<div style="display: flex; justify-content: center;">
+  <div style="flex: 50%; padding: 10px;">
+    <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png" target="_blank">
+      <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png" style="max-width: 100%;">
+    </a>
+  </div>
+  <div style="flex: 50%; padding: 10px;">
+    <a href="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png" target="_blank">
+      <img src="https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png" style="max-width: 100%;">
+    </a>
+  </div>
+</div>
 
 # 6. Similarity Detection
 
