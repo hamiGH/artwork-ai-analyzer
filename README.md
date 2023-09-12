@@ -203,9 +203,8 @@ To perform color analysis on an image, follow these steps:
 2. Use the `get_top_3_dominant_colors(image_path)` method to extract the top 3 dominant colors from an image specified by the `image_path`.
 3. Use the `plot_dominant_colors2(image_path, top_colors)` method to plot the original image and the dominant colors.
 
-| Image 1                                           | Image 2                                           |
-| ------------------------------------------------- | ------------------------------------------------- |
 | [![Image 1](https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png)](https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_0.png) | [![Image 2](https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png)](https://github.com/hamiGH/artwork-ai-analyzer/blob/main/output/dominant_colors_18.png) |
+| ------------------------------------------------- | ------------------------------------------------- |
 
 
 # 6. Similarity Detection
