@@ -1,7 +1,7 @@
 # BASE URL
 base_url: "https://directory.art"
 
-headless_mode: true  # Set to 'true' to enable headless mode, or 'false' to disable
+headless_mode: false  # Set to 'true' to enable headless mode, or 'false' to disable
 
 # Description: This configuration defines the steps for the crawling program.
 #              You can go from step 1 to the last step, activating one step at a time.
@@ -9,7 +9,7 @@ headless_mode: true  # Set to 'true' to enable headless mode, or 'false' to disa
 #              Each step uses the results of the previous step.
 
 active_step: crawl_artists    # Specify the active step here
-current_state_index: 2      # Data to resume crawling
+current_state_index: 0      # Data to resume crawling
 
 crawling_steps:
   - name: crawl_artists
